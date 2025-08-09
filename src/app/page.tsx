@@ -1,3 +1,4 @@
+import ProductsSection from "@/components/ProductsSections";
 import Categories from "./_components/Categories";
 import Hero from "./_components/Hero";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Categories />
+      <ProductsSection />
     </main>
   );
 }
