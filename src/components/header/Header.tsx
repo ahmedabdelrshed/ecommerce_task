@@ -10,13 +10,13 @@ const Header = () => {
   const links = [
     { id: crypto.randomUUID(), title: "Home", href: "/" },
     { id: crypto.randomUUID(), title: "Shop", href: "/shop" },
-    { id: crypto.randomUUID(), title: "About", href: "/about" },
-    { id: crypto.randomUUID(), title: "Contact", href: "/contact" },
+    { id: crypto.randomUUID(), title: "About", href: "/" },
+    { id: crypto.randomUUID(), title: "Contact", href: "/" },
   ];
 
   return (
     <>
-      <header className="bg-white py-4 md:py-6  fixed w-full z-30">
+      <header className="bg-white py-4 md:py-6   w-full z-30">
         <div className="mx-auto px-4 md:px-8 lg:px-16 xl:px-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-1">
@@ -25,7 +25,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-14">
+          <nav className="hidden lg:flex items-center space-x-14">
             {links.map((link) => (
               <Link
                 key={link.id}
@@ -38,7 +38,7 @@ const Header = () => {
           </nav>
 
           {/* Desktop Icons */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden lg:flex space-x-8">
             <img src="/icons/person.svg" alt="User" />
             <img src="/icons/search.svg" alt="Search" />
             <img src="/icons/heart.svg" alt="Wishlist" />
@@ -49,7 +49,7 @@ const Header = () => {
           <button
             type="button"
             aria-label="Open menu"
-            className="md:hidden focus:outline-none"
+            className="lg:hidden focus:outline-none"
             onClick={() => setMenuOpen(true)}
           >
             {/* Hamburger icon */}

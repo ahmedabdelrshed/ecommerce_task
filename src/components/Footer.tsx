@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="border-t border-[#0000002B] mt-12">
-      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="border-t border-[#0000002B] ">
+      <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {/* Brand + Address */}
         <div>
           <h2 className="text-2xl font-bold text-gray-900 mb-10">Funiro.</h2>

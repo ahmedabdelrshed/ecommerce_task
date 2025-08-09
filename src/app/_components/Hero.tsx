@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section
-      className="relative bg-cover bg-center w-full h-screen "
+      className="relative bg-cover bg-center w-full h-[calc(100vh-80px)] "
       style={{ backgroundImage: "url('/images/home_img.jpg')" }}
     >
       {/* Content */}
