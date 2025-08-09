@@ -17,7 +17,7 @@ export const products: Product[] = [
         subtitle: "Stylish cafe chair",
         price: "Rp 2.500.000",
         oldPrice: "Rp 3.500.000",
-        imgSrc: "/images/products/syltherine.png",
+        imgSrc: "/images/products/Syltherine.png",
         discount: "-30%",
         isNew: false,
     },
