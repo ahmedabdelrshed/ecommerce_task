@@ -78,10 +78,10 @@ const SliderDot = ({ active }: DotProps) => {
   return (
     <button
       className={`w-5 h-5 cursor-pointer rounded-full flex items-center justify-center transition-all duration-300 ${
-        active ? "border-2 border-[#B88E2F]" : ""
+        active ? "border-2 border-primary" : ""
       }`}
     >
-      <div className={`w-3 h-3 ${active ? "bg-[#B88E2F]" : "bg-gray-300"} rounded-full`} />
+      <div className={`w-3 h-3 ${active ? "bg-primary" : "bg-gray-300"} rounded-full`} />
     </button>
   );
 };

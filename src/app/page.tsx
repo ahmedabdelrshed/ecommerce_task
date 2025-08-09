@@ -2,6 +2,7 @@ import ProductsSection from "@/components/ProductsSections";
 import Categories from "./_components/Categories";
 import Hero from "./_components/Hero";
 import RoomsInspiration from "./_components/RoomsInspiration";
+import FurnitureWork from "./_components/FurnitureWork";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Categories />
       <ProductsSection />
       <RoomsInspiration />
+     <FurnitureWork />
     </main>
   );
 }
