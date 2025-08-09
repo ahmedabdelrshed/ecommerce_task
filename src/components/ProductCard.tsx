@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+
 import React from "react";
 import type { Product } from "../data/products";
+import Image from "next/image";
 
 interface ProductCardProps {
   product: Product;
@@ -10,21 +13,48 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const { title, subtitle, price, oldPrice, imgSrc, discount, isNew } = product;
 
   return (
-    <div className="bg-white rounded-md w-full relative max-w-sm group">
+    <div className="bg-white  w-full relative max-w-sm group overflow-hidden">
       {/* Discount / New badges */}
       {discount && (
-        <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-semibold px-2  w-12 h-12 leading-12 rounded-full z-10">
+        <div className="absolute top-4 right-4 bg-red-500 text-white text-xs font-semibold px-2 w-12 h-12 rounded-full z-10 flex items-center justify-center">
           {discount}
         </div>
       )}
       {isNew && (
-        <div className="absolute top-4 right-4 bg-teal-500 text-white text-xs text-center font-semibold px-2 w-12 h-12 leading-12 rounded-full z-10">
+        <div className="absolute top-4 right-4 bg-teal-500 text-white text-xs font-semibold px-2 w-12 h-12 rounded-full z-10 flex items-center justify-center">
           New
         </div>
       )}
 
+      {/* Full Card Overlay */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center gap-4 pointer-events-none">
+        <div className="absolute inset-0 bg-[#3A3A3A] opacity-0 group-hover:opacity-[72%] transition-opacity duration-300 pointer-events-auto"></div>
+        <button className="relative opacity-0 group-hover:opacity-100 z-20 bg-white text-[#B88E2F] font-semibold py-2 px-6 pointer-events-auto">
+          Add to cart
+        </button>
+        <div className="relative z-20 flex gap-4 text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-auto">
+          <div className="flex items-center gap-1">
+            <Image src="/icons/share.svg" alt="Share" width={16} height={16} />
+            <span>Share</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Image
+              src="/icons/compare.svg"
+              alt="Compare"
+              width={16}
+              height={16}
+            />
+            <span>Compare</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Image src="/icons/like.svg" alt="Like" width={16} height={16} />
+            <span>Like</span>
+          </div>
+        </div>
+      </div>
+
       {/* Image */}
-      <div className="w-full h-72 overflow-hidden">
+      <div className="relative w-full h-72 overflow-hidden">
         <img
           src={imgSrc}
           alt={title}
