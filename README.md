@@ -30,6 +30,7 @@ Both pages match the Figma design structure, components, layout, and responsiven
 ---
 
 ## Project Structure
+```
 app/
 ├── _components/             
 │   ├── Categories.tsx
@@ -58,6 +59,7 @@ components/
 
 data/
 └── products.ts
+```
 
 
 ## Components Used
