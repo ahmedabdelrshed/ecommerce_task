@@ -31,30 +31,30 @@ Both pages match the Figma design structure, components, layout, and responsiven
 
 ## Project Structure
 app/
-├── _components/
-│ ├── Categories.tsx
-│ ├── FurnitureWork.tsx
-│ ├── Hero.tsx
-│ ├── RoomsInspiration.tsx
-├── shop/
-│ ├── _components/
-│ │ ├── Pagination.tsx
-│ │ ├── ServiceFeatures.tsx
-│ │ └── ShopBanner.tsx
-│ └── page.tsx
-├── api/products/
-│ └── route.ts
+├── _components/             
+│   ├── Categories.tsx
+│   ├── FurnitureWork.tsx
+│   ├── Hero.tsx
+│   ├── RoomsInspiration.tsx
+├── shop/                    
+│   ├── _components/
+│   │   ├── Pagination.tsx
+│   │   ├── ServiceFeatures.tsx
+│   │   └── ShopBanner.tsx
+│   └── page.tsx
+├── api/products/           
+│   └── route.ts
 ├── favicon.ico
 ├── globals.css
 ├── layout.tsx
-└── page.tsx
+└── page.tsx                 
 
 components/
 └── header/
-├── Header.tsx
-├── Footer.tsx
-├── ProductCard.tsx
-└── ProductsSections.tsx
+    ├── Header.tsx
+    ├── Footer.tsx
+    ├── ProductCard.tsx
+    └── ProductsSections.tsx
 
 data/
 └── products.ts
