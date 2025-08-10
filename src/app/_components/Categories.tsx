@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import React from "react";
 
 const categories = [
@@ -46,10 +47,13 @@ const Categories = () => {
             className="block group overflow-hidden rounded-lg  duration-300"
           >
             <div className="aspect-[4/5] relative w-full overflow-hidden rounded-lg">
-              <img
+              <Image
                 src={imageSrc}
                 alt={alt}
-                className="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                fill
+                className="object-cover rounded-lg group-hover:scale-105 transition-transform duration-300"
+                sizes="100vw"
+                quality={80}
                 loading="lazy"
               />
             </div>

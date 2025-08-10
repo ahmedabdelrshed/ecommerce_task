@@ -1,9 +1,16 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
-    <section
-      className="relative bg-cover bg-center w-full h-[calc(100vh-80px)] "
-      style={{ backgroundImage: "url('/images/home_img.jpg')" }}
-    >
+    <section className="relative w-full h-[calc(100vh-80px)]">
+      <Image
+        src="/images/home_img.jpg"
+        alt="Hero background"
+        fill
+        priority
+        quality={80}
+        className="object-cover z-0"
+      />
       {/* Content */}
       <div
         className=" absolute 
